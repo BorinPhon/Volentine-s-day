@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love 💖</title>
+    <base href="./">
     <style>
         body {
             text-align: center;
@@ -191,15 +192,15 @@
 <body>
     <div class="slider">
         <div class="slides">
-          <div class="slide" style="background-image: url('assets/img/1.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/2.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/3.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/memories1.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/memories2.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/memories3.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/memories4.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/memories5.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/img/memories6.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/1.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/2.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/3.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/memories1.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/memories2.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/memories3.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/memories4.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/memories5.jpg');"></div>
+          <div class="slide" style="background-image: url('./assets/img/memories6.jpg');"></div>
           
         </div>
       </div>
@@ -210,7 +211,7 @@
     <p>You make my world brighter every day. 💕</p>
     <button onclick="showSurpriseSequence()">Click for a Surprise! 💝</button>
     <p class="hidden-message" id="message">You are my heart, my happiness, and my forever. I love you! Nit❤️</p>
-    <audio id="music" src="assets/img/bensound-romantic.mp3" loop></audio>
+    <audio id="music" src="./assets/img/bensound-romantic.mp3" loop></audio>
     <!-- Valentine Question Popup (hidden by default) -->
     <div id="valentine-question" style="display:none; flex-direction:column; align-items:center; justify-content:center; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.95); z-index:1000;">
         <h2 style="color:#ff4b5c;">Do you love me?</h2>
@@ -251,11 +252,11 @@
             container.style.flexWrap = 'wrap';
             container.style.justifyContent = 'center';
             container.innerHTML = `
-                <div class="shape heart-shape"><img src="assets/img/memories1.jpg" alt="Heart"/></div>
-                <div class="shape square-shape"><img src="assets/img/memories2.jpg" alt="Square"/></div>
-                <div class="shape rectangle-shape"><img src="assets/img/memories3.jpg" alt="Rectangle"/></div>
-                <div class="shape triangle-shape"><img src="assets/img/memories4.jpg" alt="Triangle"/></div>
-                <div class="shape circle-shape"><img src="assets/img/memories5.jpg" alt="Circle"/></div>
+                <div class="shape heart-shape"><img src="./assets/img/memories1.jpg" alt="Heart"/></div>
+                <div class="shape square-shape"><img src="./assets/img/memories2.jpg" alt="Square"/></div>
+                <div class="shape rectangle-shape"><img src="./assets/img/memories3.jpg" alt="Rectangle"/></div>
+                <div class="shape triangle-shape"><img src="./assets/img/memories4.jpg" alt="Triangle"/></div>
+                <div class="shape circle-shape"><img src="./assets/img/memories5.jpg" alt="Circle"/></div>
             `;
         }
         // Background Slideshow
@@ -326,7 +327,7 @@
                 document.body.appendChild(loveMsg);
             }
             loveMsg.innerHTML = '<span class="icon">💖</span><span style="display:inline-block;white-space:normal;">I love you too!</span>' +
-                '<video id="love-video" src="assets/img/cutevdo.mp4" style="margin-top:20px; max-width:90vw; width:320px; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.08); background:#000; display:block;" autoplay playsinline></video>';
+                '<video id="love-video" src="./assets/img/cutevdo.mp4" style="margin-top:20px; max-width:90vw; width:320px; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.08); background:#000; display:block;" autoplay playsinline></video>';
             // Pause music and play video with sound only once
             const music = document.getElementById('music');
             if (music) music.pause();
