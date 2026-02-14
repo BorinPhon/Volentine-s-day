@@ -326,6 +326,7 @@
                 loveMsg.style.boxShadow = '0 4px 32px rgba(0,0,0,0.08)';
                 document.body.appendChild(loveMsg);
             }
+            loveMsg.style.display = 'block';
             loveMsg.innerHTML = '<span class="icon">💖</span><span style="display:inline-block;white-space:normal;">I love you too!</span>' +
                 '<video id="love-video" src="./assets/img/cutevdo.mp4" style="margin-top:20px; max-width:90vw; width:320px; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.08); background:#000; display:block;" autoplay playsinline></video>';
             // Pause music and play video with sound only once
@@ -341,7 +342,7 @@
                     v.play().catch(()=>{});
                 }
             }, 100);
-            // After 4 seconds, hide message, video, and resume music
+            // After 8 seconds, hide message, video, and resume music
             setTimeout(() => {
                 loveMsg.style.display = 'none';
                 document.getElementById('valentine-question').style.display = 'none';
